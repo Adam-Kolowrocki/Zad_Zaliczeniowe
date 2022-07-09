@@ -1,16 +1,14 @@
 numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
 
 
-def mergesort(numbers):
+def merge_sort(numbers):
     if len(numbers) > 1:
         left_numbers = numbers[:len(numbers) // 2]
         right_numbers = numbers[len(numbers) // 2:]
 
-        # recursion
-        mergesort(left_numbers)
-        mergesort(right_numbers)
+        merge_sort(left_numbers)
+        merge_sort(right_numbers)
 
-        #merge
         i = 0
         j = 0
         k = 0
@@ -36,8 +34,8 @@ def main():
     print(numbers)
     print(type(numbers))
     print('Sorted array is:', end="\n")
-    print(mergesort(numbers))
-    print(type(mergesort(numbers)))
+    print(merge_sort(numbers))
+    print(type(merge_sort(numbers)))
 
 
 if __name__ == "__main__":
