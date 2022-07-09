@@ -39,9 +39,13 @@ def menu():
 
 
 def main():
-    # print(clear)
-    print(f'******** Sorting ********'.center(20))
-    # input(f'Press Enter to begin...'.center(30))
+    print(clear)
+    print('\n')
+    print(f'******** Sorting ********'.center(150))
+    print('\n')
+    print(f'This is a project made for sorting natural numbers.'.center(150))
+    print('\n')
+    input(f'Press Enter to begin...'.center(150))
     menu()
 
 
