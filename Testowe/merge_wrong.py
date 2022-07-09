@@ -1,6 +1,3 @@
-numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
-
-
 def merge_sort(numbers):
     if len(numbers) > 1:
         left_numbers = numbers[:len(numbers) // 2]
@@ -29,13 +26,12 @@ def merge_sort(numbers):
     return numbers
 
 
+numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
+
+
 def main():
-    print('Given array is:', end="\n")
     print(numbers)
-    print(type(numbers))
-    print('Sorted array is:', end="\n")
     print(merge_sort(numbers))
-    print(type(merge_sort(numbers)))
 
 
 if __name__ == "__main__":
