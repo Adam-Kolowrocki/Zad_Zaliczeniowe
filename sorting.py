@@ -26,11 +26,11 @@ def data_input(source_choice):
 
 
 def menu():
-    # print(clear)
-    print(f'You can choose the source of natural numbers to sort.')
+    print(clear)
+    print(f'You can choose the source of natural numbers to sort.'.center(140))
     print(f' Type \n "F" for file, \n "K" for keyboard or \n "R" for random generated numbers.\n')
     source_choice = input(f'What is Your Choice ->')
-    # print(clear)
+    print(clear)
     print(f'Now, You can choose sorting metod.')
     print(f' Type \n"M" for Merge Sort, \n "H" for Heap Sort, \n "B" for BubbleSort, \n '
           f'"C" for Counting Sort or \n "Q" for Quick Sort.')
@@ -41,11 +41,11 @@ def menu():
 def main():
     print(clear)
     print('\n')
-    print(f'******** Sorting ********'.center(150))
+    print(f'******** Sorting ********'.center(140))
     print('\n')
-    print(f'This is a project made for sorting natural numbers.'.center(150))
+    print(f'This is a project made for sorting natural numbers.'.center(140))
     print('\n')
-    input(f'Press Enter to begin...'.center(150))
+    input(f'Press Enter to begin...'.center(140))
     menu()
 
 
