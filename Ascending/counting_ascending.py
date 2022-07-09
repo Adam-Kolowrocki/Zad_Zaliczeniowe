@@ -11,7 +11,6 @@ def counting_sort(numbers):
         if sorted_dic[key] > 0:
             sorted_numbers.append(key)
             sorted_dic[key] -= 1
-    sorted_numbers.reverse()
     return sorted_numbers
 
 

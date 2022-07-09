@@ -3,17 +3,18 @@ def bubble_sort(numbers):
     while change > 0:
         change -= 1
         for i in range(0, len(numbers) - 1):
-            if numbers[i] < numbers[i + 1]:
+            if numbers[i] > numbers[i + 1]:
                 change += 1
                 numbers.insert(i, numbers[i + 1])
                 numbers.pop(i + 2)
+    return print(f'Po sortowaniu {numbers}')
 
 
 numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
 
 
 def main():
-    return bubble_sort(numbers)
+    bubble_sort(numbers)
 
 
 if __name__ == "__main__":

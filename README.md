@@ -1,17 +1,18 @@
 # Zad_Zaliczeniowe
 This is my final project Python curse 
 
-
-
-Dla fanów algorytmów:
-
-Algorytmy sortowania
-Stwórz program implementujący następujące algorytmy sortowania dla liczb naturalnych. Program powinien zwracać liczby posrotowane w porządku malejącym
+Decided try to write a script with 5 types of sorting:
 - Merge Sort, 
 - Heap Sort, 
 - BubbleSort
 - Counting Sort
-- Quick Sort [ rozszerzenie - w wersji rekurencyjnej (pivot = pierwszy element ciągu)]
+- Quick Sort
+
+It sorts N-element sequence of natural numbers and returns in descending order.
+
+
+ Program powinien zwracać liczby posrotowane w porządku malejącym
+
 
 Dane wejściowe: N-elementowy ciąg liczb naturalnych wczytywany z klawiatury (n<=10) oraz generowany przez generator danych będący częścią/modułem programu.
 

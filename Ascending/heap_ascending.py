@@ -30,9 +30,8 @@ numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
 
 
 def main():
+    print(numbers)
     heap_sort(numbers)
-    numbers.reverse()
-    return numbers
 
 
 if __name__ == "__main__":

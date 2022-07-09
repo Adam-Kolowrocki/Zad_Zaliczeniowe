@@ -10,7 +10,7 @@ def merge_sort(numbers):
         j = 0  # right_numbers index
         k = 0  # merge_numbers index
         while i < len(left_numbers) and j < len(right_numbers):
-            if left_numbers[i] > right_numbers[j]:
+            if left_numbers[i] <= right_numbers[j]:
                 numbers[k] = left_numbers[i]
                 i += 1
             else:
@@ -32,7 +32,8 @@ numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
 
 
 def main():
-    return merge_sort(numbers)
+    print(numbers)
+    print(merge_sort(numbers))
 
 
 if __name__ == "__main__":
