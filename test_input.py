@@ -18,23 +18,18 @@ def data_input():
             numbers.append(n)
         return numbers
     elif source_choice == 'k':
-        numbers = []
         while True:
-            try:
-                num_count = int(input(f'How many natural numbers do You want to sort ?'))
-                if not (num_count == int):
-                    raise ValueError(f'Wrong number... Type natural number.')
-                elif num_count <= 0:
-                    print(f'Wrong number... Type natural number.')
+            numbers = []
+            num_count = int(input(f'How many natural numbers do You want to sort ?'))
+            if num_count <= 0:
+                print(f'Wrong number... Type natural number.')
+                continue
+            for i in range(1, num_count + 1):
+                user_input = int(input(f'Type {i} number ->'))
+                if user_input > 0:
+                    numbers.append(user_input)
                 else:
-                    return num_count
-                for i in range(1, num_count + 1):
-                    user_input = int(input(f'Type {i} number ->'))
-                    if user_input > 0:
-                        numbers.append(user_input)
-                    else:
-                        print(f'Wrong number... Type natural numbers.')
-            print(numbers)
+                    print(f'Wrong number... Type natural numbers.')
             return numbers
 
 
