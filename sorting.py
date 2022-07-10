@@ -17,7 +17,8 @@ def sort_metod(sort_choice, numbers):
     elif sort_choice == 'c':
         return counting_sort(numbers)
     elif sort_choice == 'q':
-        return quick_sort(numbers)
+        quick_sort(numbers)
+        return numbers
 
 
 def data_input(source_choice):
@@ -73,6 +74,7 @@ def main():
     input(f'Press Enter to begin...'.center(140))
     source_choice, sort_choice = menu()
     numbers = data_input(source_choice)
+    print(clear)
     print(f'Numbers You wanted to sort was :')
     print(numbers)
     print('\n')
