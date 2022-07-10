@@ -1,9 +1,26 @@
 import random
+from merge import merge_sort
+from bubble import bubble_sort
+from heap import heap_sort
+from counting import counting_sort
+from quick import quick_sort
 clear = '\n'*25
 
 
-def data_input():
-    source_choice = 'k'
+def sort_metod(sort_choice, numbers):
+    if sort_choice == 'm':
+        return merge_sort(numbers)
+    elif sort_choice == 'h':
+        return heap_sort(numbers)
+    elif sort_choice == 'b':
+        return bubble_sort(numbers)
+    elif sort_choice == 'c':
+        return counting_sort(numbers)
+    elif sort_choice == 'q':
+        return quick_sort(numbers)
+
+
+def data_input(source_choice):
     if source_choice == 'f':
         with open('n_numbers.txt') as f:
             numbers = f.readline()
@@ -40,7 +57,7 @@ def menu():
     source_choice = input(f'What is Your Choice ->')
     print(clear)
     print(f'Now, You can choose sorting metod.')
-    print(f' Type \n"M" for Merge Sort, \n "H" for Heap Sort, \n "B" for BubbleSort, \n '
+    print(f'Type \n "M" for Merge Sort, \n "H" for Heap Sort, \n "B" for BubbleSort, \n '
           f'"C" for Counting Sort or \n "Q" for Quick Sort.')
     sort_choice = input(f'What is Your Choice ->')
     return source_choice.lower(), sort_choice.lower()
@@ -54,7 +71,13 @@ def main():
     print(f'This is a project made for sorting natural numbers.'.center(140))
     print('\n')
     input(f'Press Enter to begin...'.center(140))
-    menu()
+    source_choice, sort_choice = menu()
+    numbers = data_input(source_choice)
+    print(f'Numbers You wanted to sort was :')
+    print(numbers)
+    print('\n')
+    print(f'After sorting the list looks like this:')
+    print(sort_metod(sort_choice, numbers))
 
 
 if __name__ == "__main__":

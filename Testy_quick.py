@@ -17,27 +17,22 @@ def partitioning(numbers, start, end):
     return right
 
 
-def quick_s(numbers, start, end):
+def quick_sort(numbers, start, end):
     if start >= end:
         return numbers
 
     p = partitioning(numbers, start, end)
-    quick_s(numbers, start, p - 1)
-    quick_s(numbers, p + 1, end)
-    return numbers
+    quick_sort(numbers, start, p - 1)
+    quick_sort(numbers, p + 1, end)
+    return numbers.reverse()
 
 
-def quick_sort(numbers):
-    numbers = quick_s(numbers, 0, len(numbers) - 1)
-    numbers = numbers.reverse()
-    return numbers
-
-numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
+# numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
 
 
 def main():
-    print(numbers)
-    print(quick_sort(numbers))
+    quick_sort(numbers, 0, len(numbers) - 1)
+    return numbers
 
 
 if __name__ == "__main__":

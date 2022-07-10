@@ -5,7 +5,7 @@ from random import randint
 def data_input():
     source_choice = 'k'
     if source_choice == 'f':
-        with open('n_numbers.txt') as f:
+        with open('../n_numbers.txt') as f:
             numbers = f.readline()
             numbers = numbers.rsplit(", ")
             for i in range(0, len(numbers)):

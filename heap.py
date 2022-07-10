@@ -24,15 +24,21 @@ def heap_sort(numbers):
     for i in range(n - 1, 0, -1):
         numbers[i], numbers[0] = numbers[0], numbers[i]
         heap(numbers, i, 0)
+    return numbers
 
+
+def reverse(numbers):
+    numbers = heap_sort(numbers)
+    print(numbers)
+    descending = numbers.reverse()
+    return descending
 
 numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
 
 
 def main():
-    heap_sort(numbers)
-    numbers.reverse()
-    return numbers
+    print(numbers)
+    print(reverse(numbers))
 
 
 if __name__ == "__main__":

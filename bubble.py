@@ -7,6 +7,7 @@ def bubble_sort(numbers):
                 change += 1
                 numbers.insert(i, numbers[i + 1])
                 numbers.pop(i + 2)
+    return numbers
 
 
 numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
