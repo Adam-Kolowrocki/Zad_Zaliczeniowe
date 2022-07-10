@@ -68,7 +68,6 @@ def menu():
     print(f' Type \n "F" for file, \n "K" for keyboard or \n "R" for random generated numbers.\n')
     source_choice = input(f'What is Your Choice ->')
     print(clear)
-
     return source_choice.lower(), sort_choice.lower()
 
 
