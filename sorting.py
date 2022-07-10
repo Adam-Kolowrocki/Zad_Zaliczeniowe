@@ -1,9 +1,10 @@
-import random
+from random import randint
 from merge import merge_sort
 from bubble import bubble_sort
 from heap import heap_sort
 from counting import counting_sort
 from quick import quick_sort
+from time_stat import time_statistics
 clear = '\n'*25
 
 
@@ -19,6 +20,8 @@ def sort_metod(sort_choice, numbers):
     elif sort_choice == 'q':
         quick_sort(numbers)
         return numbers
+    elif sort_choice == 't':
+        return time_statistics(numbers)
 
 
 def data_input(source_choice):
@@ -32,7 +35,7 @@ def data_input(source_choice):
     elif source_choice == 'r':
         numbers = []
         for i in range(0, 30):
-            n = random.randint(10, 99)
+            n = randint(10, 99)
             numbers.append(n)
         return numbers
     elif source_choice == 'k':
@@ -52,15 +55,20 @@ def data_input(source_choice):
 
 
 def menu():
+    print(f'You can choose sorting metod.')
+    print(f'Type \n "M" for Merge Sort, \n "H" for Heap Sort, \n "B" for BubbleSort, \n '
+          f'"C" for Counting Sort or \n "Q" for Quick Sort.')
+    print('\n')
+    print(f'Or Yoy can test the speed of all five methods on the same list of numbers. ')
+    print(f'Fot this, type "T".')
+    print('\n')
+    sort_choice = input(f'What is Your Choice ->')
     print(clear)
-    print(f'You can choose the source of natural numbers to sort.'.center(140))
+    print(f'And the source of natural numbers to sort.'.center(140))
     print(f' Type \n "F" for file, \n "K" for keyboard or \n "R" for random generated numbers.\n')
     source_choice = input(f'What is Your Choice ->')
     print(clear)
-    print(f'Now, You can choose sorting metod.')
-    print(f'Type \n "M" for Merge Sort, \n "H" for Heap Sort, \n "B" for BubbleSort, \n '
-          f'"C" for Counting Sort or \n "Q" for Quick Sort.')
-    sort_choice = input(f'What is Your Choice ->')
+
     return source_choice.lower(), sort_choice.lower()
 
 

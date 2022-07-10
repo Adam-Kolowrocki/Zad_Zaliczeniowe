@@ -1,3 +1,6 @@
+from time import time
+
+
 def partitioning(numbers, start, end):
     pivot = numbers[start]
     left = start + 1
@@ -27,12 +30,18 @@ def quick_sort(numbers, start, end):
     return numbers.reverse()
 
 
-# numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
+numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]
 
 
 def main():
+    st_time = time()
+    print(f'Przed sortowaniem {numbers}')
     quick_sort(numbers, 0, len(numbers) - 1)
-    return numbers
+    print(f'Po sortowaniu {numbers}')
+    en_time = time()
+    el_time = en_time - st_time
+    print(f'The script run for {el_time} s.')
+    # return numbers
 
 
 if __name__ == "__main__":
