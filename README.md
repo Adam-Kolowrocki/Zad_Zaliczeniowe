@@ -1,5 +1,5 @@
 # Zad_Zaliczeniowe
-This is my final project Python curse 
+This is my final Python curse project  
 
 Decided try to write a script with 5 types of sorting:
 - Merge Sort, 
