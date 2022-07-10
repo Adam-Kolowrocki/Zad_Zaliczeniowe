@@ -77,7 +77,6 @@ def time_statistics(numbers):
     print('\n')
     print(f'As You can see, the fastest sorting method is "{fastest_method} sort" with time {fastest_method_time},\n'
           f'and the slowest sorting method is "{slowest_method} sort" with time {slowest_method_time}.')
-    print('\n')
 
 
 numbers = [13, 24, 25, 26, 27, 15, 35, 36, 29, 49, 41, 37, 45, 68, 75, 25, 16]

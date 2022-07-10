@@ -21,7 +21,7 @@ def sort_metod(sort_choice, numbers):
         quick_sort(numbers)
         return numbers
     elif sort_choice == 't':
-        return time_statistics(numbers)
+        time_statistics(numbers)
 
 
 def data_input(source_choice):
